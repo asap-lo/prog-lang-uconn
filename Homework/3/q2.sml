@@ -17,7 +17,7 @@ fun take 0 stream = nil
 (* Why is this only taking in int Stream?*)
 fun mul Nil (b: real Stream) = Nil
    | mul (a : real Stream) Nil = Nil
-   | mul (Cons(h1,t1) : real Stream) (Cons(h2,t2) : real Stream) = Cons(h1*h2, fn () => mul (t1()) (t2()));
+   | mul (Cons(h1,t1) : real Stream) (Cons(h2,t2) : real Stream) = Cons(h1*h2, fn () => mul (t1()) (t2()))
 
 
 fun printRealList x = if null x then print("\n")
